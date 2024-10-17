@@ -1,0 +1,546 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+html{
+    height: 100vh;
+    overflow: hidden;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background: #222;
+    /* adding parallax effect */
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.body-container{
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    justify-content: space-between;
+    align-items: center;
+    
+    /* gap: 160px; */
+    width:100% ;
+    min-height: 100vh;
+    position: relative;
+     /* adding parallax effect */
+   transform-style: preserve-3d;
+   margin-top: 40px;
+  
+}
+
+.body-container::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url("about_me_pic2.jpg.webp") top center;
+    background-size: cover;
+    transform: translateZ(-1px) scale(2.2);
+    /* filter: blur(1px); */
+    /* filter: contrast(200%); */
+    /* filter: grayscale(100%); */
+ }
+.heading-container{
+    display: flex;
+    flex-direction: row;
+   justify-content: space-around;
+   gap: 40px;
+
+}
+.headingleft{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    gap: 20px;
+    margin-top: 10px;
+   
+}
+.heading-right{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    gap: 20px;
+    margin-top: 10px;
+}
+#text{
+    color: white;
+    text-decoration: none;
+    /* transition-property: all; */
+    transition:border-bottom 0.5s all;
+}
+#text1{
+    color: white;
+    text-decoration: none;
+}
+.scroll{
+    color: white;
+}
+
+#scrolling{
+    text-decoration: none;
+}
+.containerUnfold{
+    display: flex;
+    /* justify-content: space-between; */
+    flex-direction: column;
+    justify-content: space-between;
+    align-self:center;
+    /* gap: 40px; */
+}
+#unfold1{
+    color: white;
+    font-size: 70px;
+}
+#unfold{
+    color: white;
+    font-size: 30px;
+}
+.unfold{
+    font-size: 20px;
+    font-weight: 300;
+
+}
+#text:hover{
+    border-bottom: 1px solid white;
+   
+}
+
+ /* new-section */
+
+ .section-two{
+    background-color: black;
+    padding: 4rem;
+    position: fixed;
+
+}
+
+
+
+.fixed-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* background-color: #333;  */
+    color: white; 
+    
+    padding: 80px;
+    z-index: 1000; 
+}
+.portfolio-heading {
+    
+    margin: 0;
+    font-size: 2em;
+    color: white;
+
+}
+
+.portfolio-section {
+    padding-top: 60px; 
+    padding-bottom: 20px; 
+}
+
+.section {
+    display: flex; 
+    justify-content: space-between; 
+    margin: 20px 0;
+}
+
+.img-item {
+    position: relative; 
+    flex: 1; 
+    margin: 0 10px; 
+    overflow: hidden; 
+}
+
+.banner-text{
+    position: absolute; 
+    top: 0;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    
+    
+    background: rgba(0,0,0,0.5 ) ;
+    opacity: 0;
+    transition: 0.6s;
+  }
+  .banner-text:hover{
+    opacity:1;
+  }
+  .banner-text h3{
+    color: white;
+}
+.banner-text p{
+    color: rgb(234, 234, 234);
+}
+
+.banner-text > *{
+    transform: translateY(25px);
+    transition:transform 0.6s;
+}
+.banner-text:hover > *{
+    transform: translateY(opx);
+}
+.img-item img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+    /* transition: transform 0.3s;  */
+ 
+    transition-property: all;
+    transition-duration: 4s;
+    transition-delay: 1s;
+    transition-timing-function: linear;
+}
+
+/* logo-section */
+.logo{
+    display: flex;
+    
+    flex-direction: row;
+    justify-content: space-between;
+    
+    
+}
+
+/* About-me-section */
+.about-main-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   align-items: center;
+   gap: 90px;
+   
+}
+.head{
+    font-size: 23px;
+}
+.underline-logo{
+    width: 100px;
+}
+
+.img-p-section{
+    display: flex;
+    flex-direction: rows;
+    justify-content: space-between;
+  
+}
+.header-about-section{
+    font-size: 24px;
+}
+.first-p,.second-p{
+    font-size: 21px;
+}
+.download-button {
+    height: 44px;
+    width: 167px;
+    background-color: black;
+    color: white;
+    border: 2px solid rgb(168, 165, 165);
+    border-radius: 23px;
+    padding: 10px 20px;
+    font-size: 13px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    /* transition: background-color 0.3s, color 0.3s; */
+}
+.download-button:hover{
+    border: 2px solid white;
+}
+.text-color-red{
+    color: rgb(116, 48, 48);
+    cursor: pointer;
+}
+.text-color-red:hover{
+  color: rgb(219, 216, 216);
+}
+.head-p-button{
+    display: flex;
+    flex-direction: column;
+    /* justify-content:space-between; */
+    gap: 35px;
+}
+
+/* my services section */
+.myservices-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   align-items: center;
+  
+   gap: 90px;
+}
+.all-series-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  gap: 35px;
+  padding-top: 60px;
+}
+.first-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+  
+}
+.second-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+ 
+}
+#AllparaSeriesSection{
+    color: rgb(220, 217, 217);
+    font-size: 20px;
+    font-weight: 200;
+}
+#bold{
+    font-weight: bold;
+}
+
+/* my skills section */
+/* my skills */
+.myservices-section1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   align-items: center;
+  padding-top: 90px;
+   gap: 90px;
+}
+.my-skils-sections{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 40px;
+    padding-top: 50px;
+  
+}
+#skill{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: red;
+   font-weight: 900;
+   font-size: 65px;
+}
+
+/* my journel section */
+.my-skils-sections2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-around;
+   
+}
+.myjournal {
+    padding-top: 90px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.journal1, .journal2 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.journal1 div, .journal2 div {
+    flex: 1;
+    margin: 0 0px;
+    padding: 13px;
+}
+
+.journal1 img  {
+    /* width: 100%; */
+    border-radius: 1px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    /* hover */
+   position: relative;
+   overflow: hidden;
+ 
+}
+.journal2 img{
+    width: 100%;
+    border-radius: 1px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+   /* hover */
+   position: relative;
+   overflow: hidden;
+}
+
+.journal1 img {
+    height: 329px; /* Keep consistent height for journal1 images */
+    object-fit: cover;
+}
+
+.journal-text{
+    position: relative;
+   
+}
+.banner-text1{
+    position: absolute;
+   width: 100%;
+   height: 100%;
+    padding-bottom: 12px;
+    margin-bottom: 4px;
+    background-color: rgba(0, 0, 0,0.5);
+    /* top: 0; */
+    bottom: 0;
+    
+    
+    opacity: 1;
+    transition: 0.6s;
+    object-fit: cover;
+   
+}
+.banner-text1 h3{
+    color: white;
+}
+.banner-text1 p{
+  color: rgb(204, 200, 200);
+}
+
+.banner-text1:hover{
+    opacity: 0;
+}
+.banner-text1 > *{
+    transform: translateZ(25px);
+    transition: transform 0.6s;
+
+}
+.banner-text1:hover >*{
+    transform: translateZ(0px);
+}
+
+
+
+/* Get in touch */
+.form-container {
+    
+    margin: auto;
+   background-color: black;
+   
+}
+
+.form-group {
+ background: black;
+ display: flex;
+ flex-direction: row;
+ 
+
+}
+
+label {
+    display: block;
+  
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+   
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 1px;
+    box-sizing: border-box;
+    width: 420px;
+    height:150px ;
+    border-top: none;
+border-left: none;
+border-right: none;
+}
+
+button {
+    background-color: black;
+    color: rgb(228, 222, 222);
+    border: 2px solid rgb(181, 181, 181);
+    border-radius: 27px;
+   
+  
+    cursor: pointer;
+    font-size: 16px;
+    width: 180px;
+    height: 55px;
+}
+
+#name{
+width: 210px;
+height:30px ;
+color: white;
+border-top: none;
+border-left: none;
+border-right: none;
+}
+/* #name:active{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+} */
+#email{
+    width: 210px;
+    height:30px ;
+    border-top: none;
+border-left: none;
+border-right: none;
+color: white;
+}
+
+.email h4{
+    font-size: smaller;
+    color: rgb(184, 184, 184);
+    
+}
+.email p{
+    color: white;
+    font-size: x-large;
+}
+.phone h4{
+    color: rgb(184, 184, 184);
+    font-size: smaller;
+}
+.phone p{
+    color: white;
+    font-size: x-large;
+}
+.address h4{
+    color: rgb(184, 184, 184);
+    font-size: smaller;
+}
+.address p{
+color: white;
+    font-size: x-large;
+}
+.get-in-touch{
+    padding-top: 58px;
+    display: flex;
+  flex-direction: row;
+    justify-content: space-between
+    
+}
+.form-container{
+   padding-right: 420px;
+}
+.form-details{
+   display: flex;
+   flex-direction: column;
+  justify-content: space-around;
+}
+::placeholder{
+    color: rgb(201, 200, 200);
+}
